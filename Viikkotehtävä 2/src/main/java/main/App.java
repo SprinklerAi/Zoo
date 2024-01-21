@@ -6,8 +6,10 @@ import java.util.Scanner;
 import javax.swing.plaf.TreeUI;
 
 /**
- * Hello world1
- *
+ * Atilla Eminli
+ * Viikkotehtävä 2.
+ * Tämä on valikkopohjainen ohjelma joka saa syötteitä käyttäjältä.
+ * OHJELMA PYRKII TÄYTTÄMÄÄN 5 PISTEEN VAATIMUKSET
  */
 public class App 
 {
