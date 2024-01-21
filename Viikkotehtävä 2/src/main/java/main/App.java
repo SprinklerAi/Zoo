@@ -58,7 +58,7 @@ public class App
                         break;
 
                     default:
-                        System.out.println("Tuntematon valinta. Yritä uudestaan.");
+                        System.out.println("Syöte oli väärä.");
                         break;
                 }
 
