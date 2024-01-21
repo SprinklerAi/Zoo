@@ -1,6 +1,5 @@
 package main;
 
-import java.nio.file.FileAlreadyExistsException;
 import java.util.Scanner;
 
 import javax.swing.plaf.TreeUI;
