@@ -31,17 +31,17 @@ public class App
                         System.out.println("Mitä siili sanoo:");
                         String text = sc.nextLine();
                         if (text.length() == 0) {
-                            System.out.println("Olen " + hedgehog.get_name() + " ja ikäni on " + hedgehog.get_age() + ", mutta antaisitko silti syötteen?");
+                            System.out.println("Olen " + hedgehog.get_name() + " ja ikäni on " + hedgehog.get_age() + " vuotta, mutta antaisitko silti syötteen?");
                         } else {
                             hedgehog.speak(text);
                         }
                         break;
                     
                     case 2:
-                        System.out.println("Anna siilin nimi: ");
+                        System.out.println("Anna siilin nimi:");
                         String new_name = sc.nextLine();
                         hedgehog.set_name(new_name);
-                        System.out.println("Anna siilin ikä: ");
+                        System.out.println("Anna siilin ikä:");
                         int new_age = Integer.parseInt(sc.nextLine());
                         hedgehog.set_age(new_age);
                         break;
