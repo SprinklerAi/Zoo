@@ -8,7 +8,7 @@ public class Animal {
     private String animal_name;
     private String species; 
     private int age;
-    private static ArrayList<Animal> animals = new ArrayList<>();
+    private ArrayList<Animal> animals = new ArrayList<>();
     
     public Animal(String animal_name, String species, int age) {
         this.animal_name = animal_name;
@@ -17,13 +17,16 @@ public class Animal {
     }
     
     public Animal() {
-        this.animal_name = null;
-        this.species = null;
-        this.age = 0;
-        animals.add(this);
+        this(null, null, 0);
     }
 
-    public static void set_zoo(String zoo) {
+    public void add_animals(ArrayList<Animal> animals, Animal new_animal) {
+        if (new_animal.get_animal_name() != null || new_animal.get_species() != null || new_animal.get_age() != 0) {
+         animal.add(new_animal);
+        }
+    }
+    
+    public void set_zoo(String zoo) {
         Animal.zoo = zoo;
     }
 
@@ -43,13 +46,13 @@ public class Animal {
         return age;
     }
     
-    public static  void list_animals() {
-        for (Animal animal : Animal.animals) {
+    public  void list_animals(ArrayList<Animal> animals) {
+        for (Animal animal : this.animals) {
             System.out.println(animal.get_species() + ":" + animal.get_animal_name() + ", " + animal.get_age() + " vuotta");
         }
     }
 
-    public static void run(int x) {
+    public void run(int x) {
         if(x<1) {
             return;
         }

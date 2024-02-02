@@ -13,12 +13,14 @@ public class App
 
         Scanner sc = new Scanner(System.in);
 
+        Animal animal = new Animal();
+
         ArrayList<Animal> animals = new ArrayList<>();
 
         boolean exit = false;
         
         System.out.println("Anna eläintarhalle nimi:");
-        Animal.set_zoo(sc.nextLine());
+        animal.set_zoo(sc.nextLine());
 
         while (!exit) {
             System.err.println("1) Luo uusi eläin, 2) Listaa kaikki eläimet, 3) Juoksuta eläimiä, 0) Lopeta ohjelma");
@@ -37,17 +39,17 @@ public class App
                         System.out.println("Anna eläimen ikä: ");
                         int age = Integer.parseInt(sc.next());
 
-                        animals.add(new Animal(animal_name, species, age));
+                        animal.add_animals(animals, new Animal(animal_name, species, age));
                         break;
 
                     case 2:
-                        Animal.list_animals();
+                        animal.list_animals(animals);
                         break;
                     case 3:
                         System.out.println("Kuinka monta kierrosta?");
                         sc.nextLine();
                         int x = Integer.parseInt(sc.nextLine());
-                        Animal.run(x);
+                        animal.run(x);
                         break;
                     
                     case 0:
